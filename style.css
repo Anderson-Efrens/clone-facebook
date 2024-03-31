@@ -1,0 +1,127 @@
+:root{
+    /*Aqui eu criei uma variavel de cor para caso um dia eu precise mudar o tom de um azul por exemplo, 
+    eu só vou lá navariavel e mudo o tom em apenas um lugar e consequentente todos os outros que possuam essa variavel vão sofrer essa alteração tbm*/
+    --color-white: white;
+    --color-gray: #f0f2f5;
+    --color-gray2: #dddfe2;
+    --color-dark: #1d2129;
+    --color-blue: #1b74e4;
+    --color-blue2: #166fe5;
+    --color-green: #42b72a;
+    --color-green2: #36a420;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-gray);
+    display: flex; /* Isso define que todos os meus elementos do body serão flexiveis*/
+    justify-content: center; /*alinhar na horizontal*/
+    align-items: center;
+    height: 90vh; /* Defini uma ALTURA DE 90 VIEWS */
+}
+
+.content{ 
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70vw;
+}
+
+.content-info{
+    width: 600px;
+}
+
+.content-login{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* 1rem siginifa = 16px, porém é um operador que é mais novo e também mais aconselhavel utilizar pois 16 px vai ser o mesmo no tablet,
+    celular, desktop, então ele deu um*/
+}
+
+.content-login-box{
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+}
+
+.inputs{
+    padding:15px;   
+    height: 22px;  
+    border: 1px solid var(--color-gray2);
+    border-radius: 5px;
+    outline: none; /* Linha de fundo/contorno que fica no INPUT quando se clica nele */
+    width: 90%;
+    font-size: 17px;
+    color: var(--color-dark);
+}
+
+.inputs:focus{
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 2px var(--color-gray2);
+}
+
+.btn{
+    padding: 15px; /* Espaço entre o elemento e a borda */
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.1rem;  /* 1.1rem é um POUQUINHO maior do que 16px*/
+    transition: .2s;  /* 200 milésimos de segundos a transição é isso que é o ".2s"*/
+}
+
+a{
+    color: var(--color-blue);
+    text-decoration: none;  /* Remove o 'Underline (____)' de baixo do 'Esqueceu a senha' */
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: underline;  /* Quando eu passo o meu mouse em cima eu consigo ADICIONAR o 'UNDERLINE' no esqueceu a senha */
+}
+
+hr{
+    width: 100%;
+    border: 1px solid var(--color-gray);
+}
+
+p{
+    text-align: center;
+}
+
+.btn-enter{
+    background-color: var(--color-blue);
+}
+
+.btn-enter:hover{
+    background-color: var(--color-blue2);
+}
+
+.btn-create-account{
+    background-color: var(--color-green);
+    width: auto;
+}
+
+.btn-create-account:hover{
+    background-color: var(--color-green2);
+}
+
+h1{
+    color: var(--color-blue);
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
